@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from './layout.module.css';
 import Link from 'next/link';
 import Navigation from './navigation';
 
@@ -22,7 +21,7 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Navigation />
-      <header className={styles.header}></header>
+      <header>Test header</header>
       <main>{children}</main>
     </div>
   );
