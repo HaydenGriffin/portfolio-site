@@ -5,6 +5,7 @@ import moment from 'moment';
 import { GetStaticProps } from 'next';
 import path from 'path';
 import fs from 'fs';
+import { Url } from 'url';
 
 interface WorkItem {
   companyName: string;
@@ -13,6 +14,12 @@ interface WorkItem {
   startDate: Date;
   endDate: Date;
   keyInformation: string[];
+  technologies: TechnologyItem[];
+}
+
+interface TechnologyItem {
+  name: string;
+  link: Url;
 }
 
 export default function About({ workHistory }: { workHistory: WorkItem[] }) {
@@ -26,6 +33,9 @@ export default function About({ workHistory }: { workHistory: WorkItem[] }) {
           <h3>{workItem.companyName}</h3>
           <p>{workItem.role}</p>
           <p>{moment(workItem.startDate, 'YYYY-MM-DD').format('MMM YYYY')}</p>
+          {workItem.keyInformation.map((information: string) => (
+            <p>{information}</p>
+          ))}
         </li>
       ))}
     </Layout>
@@ -37,11 +47,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const filePath = path.join(postsDirectory, 'work.json');
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   let workHistory: WorkItem[] = JSON.parse(fileContent);
-
-  workHistory.map((workItem) => {
-    var date: Date = new Date(workItem.startDate);
-    console.log(date);
-  });
 
   return {
     props: {
