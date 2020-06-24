@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import Link from 'next/link';
+import Location from '~/public/svg/location.svg';
+import Home from '~/public/svg/home.svg';
+import Person from '~/public/svg/person.svg';
+import Code from '~/public/svg/code.svg';
+import Mail from '~/public/svg/mail.svg';
 
 interface NavItemProps {
   href: string;
   title: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, title }: NavItemProps) => (
-  <div className="p-2">
-    <Link href={href}>
-      <a>
-        <h3>{title}</h3>
-      </a>
-    </Link>
-  </div>
+const NavItem: React.FC<PropsWithChildren<NavItemProps>> = ({
+  href,
+  title,
+  children,
+}: PropsWithChildren<NavItemProps>) => (
+  <Link href={href}>
+    <a>
+      <li className="py-3 pl-6 hover:bg-gray-200">
+        <span className="inline-block align-middle pr-4">{children}</span>
+        <span className="inline-block align-middle">
+          <h3>{title}</h3>
+        </span>
+      </li>
+    </a>
+  </Link>
 );
 
 const Navigation = () => (
@@ -28,22 +40,25 @@ const Navigation = () => (
       </div>
       <p className="text-2xl font-semibold pb-1">Hayden Griffin</p>
       <span className="inline-block align-middle">
-        <svg
-          className="fill-current text-gray-800 w-4 h-4"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
-        </svg>
+        <Location className="fill-current text-gray-800" />
       </span>
       <span className="inline-block align-middle">Bournemouth, Dorset</span>
     </div>
-    <div className="border-t-2 border-gray-400"></div>
-    <ul>
-      <NavItem title="Home" href="/" />
-      <NavItem title="About" href="/about" />
+    <div className="border-t-2 border-gray-400 pb-2" />
+    <ul className="grid grid-cols-1">
+      <NavItem title="Home" href="/">
+        <Home className="svg-icon" />
+      </NavItem>
+      <NavItem title="About" href="/about">
+        <Person className="svg-icon" />
+      </NavItem>
+      <NavItem title="Portfolio" href="/portfolio">
+        <Code className="svg-icon" />
+      </NavItem>
+      <div className="border-t-2 border-gray-400 pt-2 mt-2" />
+      <NavItem title="Contact" href="/contact">
+        <Mail className="svg-icon" />
+      </NavItem>
     </ul>
   </div>
 );

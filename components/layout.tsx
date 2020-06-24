@@ -5,13 +5,7 @@ import Navigation from './navigation';
 const name = '[Your Name]';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Head>
@@ -23,18 +17,13 @@ export default function Layout({
       <header />
       <main>
         <div className="flex">
-          <div className="invisible sm:visible sm:w-80">
+          <div className="invisible sm:visible sm:w-80 flex:none overflow-y-hidden">
             <Navigation />
           </div>
-          <div className="w-full bg-gray-400">{children}</div>
-        </div>
-        {!home && (
-          <div>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
+          <div className="flex-1 bg-gray-400 overflow-y-auto">
+            <div className="flex h-screen bg-gray-200">{children}</div>
           </div>
-        )}
+        </div>
       </main>
     </div>
   );

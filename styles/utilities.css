@@ -3,3 +3,7 @@
     width: 20rem;
   }
 }
+
+.svg-icon {
+  @apply fill-current text-gray-800 w-6 h-6;
+}
