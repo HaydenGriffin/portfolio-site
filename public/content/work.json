@@ -72,5 +72,17 @@
         "link": "https://www.playframework.com/"
       }
     ]
+  },
+  {
+    "companyName": "Other places I've worked at",
+    "role": "",
+    "location": "Bournemouth, Dorset",
+    "startDate": "",
+    "endDate": "",
+    "keyInformation": [
+      "Events Organisation Support (Oct 2015 - Jul 2017) @ University of Surrey Students Union",
+      "Customer Services Assistant (Nov 2013 - Jan 2016) @ John Lewis Partnership (Waitrose)"
+    ],
+    "technologies": []
   }
 ]
