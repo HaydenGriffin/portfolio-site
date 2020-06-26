@@ -1,0 +1,18 @@
+[
+  {
+    "establishment": "University of Surrey",
+    "studied": "Computer Science (with Placement Year)",
+    "obtained": "Bachelor of Science, First Class Honours",
+    "location": "Guildford, Surrey",
+    "startDate": "2015-09-01",
+    "endDate": "2019-06-01"
+  },
+  {
+    "establishment": "Poole Grammar School",
+    "studied": "GCSE / A-Levels",
+    "obtained": "A-Levels: ABB, GCSE: 12 passes B or above",
+    "location": "Poole, Dorset",
+    "startDate": "2009-09-01",
+    "endDate": "2015-06-01"
+  }
+]

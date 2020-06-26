@@ -1,0 +1,20 @@
+[
+  {
+    "project": "My Website",
+    "type": "Personal Project",
+    "date": "2020-06-01",
+    "description": "Personal Website for me",
+    "tags": ["NextJS", "ReactJS", "Typescript", "TailwindCSS"],
+    "github": "",
+    "link": ""
+  },
+  {
+    "project": "CV Verification",
+    "type": "University Work",
+    "date": "2020-06-01",
+    "description": "Final Year Project",
+    "tags": ["Golang", "ReactJS", "Typescript", "TailwindCSS"],
+    "github": "",
+    "link": ""
+  }
+]
