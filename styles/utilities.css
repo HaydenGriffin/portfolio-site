@@ -1,9 +1,3 @@
-@responsive {
-  .w-80 {
-    width: 20rem;
-  }
-}
-
-.svg-icon {
-  @apply fill-current text-gray-800 w-6 h-6;
+.homepage-background {
+  background-color: #fef3e1;
 }
