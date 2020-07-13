@@ -1,0 +1,88 @@
+[
+  {
+    "companyName": "IRMACOS",
+    "role": "TBD",
+    "location": "Bournemouth, Dorset",
+    "startDate": "2020-06-01",
+    "endDate": "",
+    "keyInformation": [],
+    "technologies": []
+  },
+  {
+    "companyName": "Ratio",
+    "role": "Graduate Software Developer",
+    "location": "Bournemouth, Dorset",
+    "startDate": "2019-09-01",
+    "endDate": "2020-03-01",
+    "keyInformation": [
+      "Designed and created REST APIs using node.js and Go to retrieve and format data for use within the companies applications",
+      "Built and designed front-end single page applications using React.js / Redux",
+      "Created a highly scalable microservice that prevents unauthorised customers from using the companies’ software, built utilising Go, AWS DynamoDB and Lambda",
+      "Worked on a project that focuses on analysing business performance metrics such as income, spend, traffic etc",
+      "Created and maintained documentation for several business critical technical procedures"
+    ],
+    "technologies": [
+      {
+        "name": "Node.js",
+        "link": "https://nodejs.org/en/"
+      },
+      {
+        "name": "React",
+        "link": "https://reactjs.org/"
+      },
+      {
+        "name": "Golang",
+        "link": "https://golang.org/"
+      },
+      {
+        "name": "AWS",
+        "link": "https://aws.amazon.com/"
+      }
+    ]
+  },
+  {
+    "companyName": "FIVIUM",
+    "role": "Trainee Applications Developer",
+    "location": "Covent Garden, London",
+    "startDate": "2017-07-01",
+    "endDate": "2018-08-01",
+    "keyInformation": [
+      "Professional Training placement completed as part of my university degree",
+      "Developed and worked on a range of systems; using FOXopen - an inhouse framework for building secure web applications",
+      "Studied and completed exams to become an Oracle Certified Associate (Oracle SQL and PL/SQL)",
+      "Provided support and assisted training of the following years intake of placement students",
+      "Gathered requirements from clients and regularly delivered presentations showcasing completed work",
+      "Peer reviewed code produced by other developers, ensuring that it is bug-free and maintainable"
+    ],
+    "technologies": [
+      {
+        "name": "FOXopen",
+        "link": "http://www.foxopen.net"
+      },
+      {
+        "name": "Oracle SQL",
+        "link": "https://www.oracle.com/database/technologies/appdev/sqldeveloper-landing.html"
+      },
+      {
+        "name": "PL/SQL",
+        "link": "https://www.oracle.com/uk/database/technologies/appdev/plsql.html"
+      },
+      {
+        "name": "Play Framework",
+        "link": "https://www.playframework.com/"
+      }
+    ]
+  },
+  {
+    "companyName": "Other places I've worked at",
+    "role": "",
+    "location": "Bournemouth, Dorset",
+    "startDate": "",
+    "endDate": "",
+    "keyInformation": [
+      "Events Organisation Support (Oct 2015 - Jul 2017) @ University of Surrey Students Union",
+      "Customer Services Assistant (Nov 2013 - Jan 2016) @ John Lewis Partnership (Waitrose)"
+    ],
+    "technologies": []
+  }
+]
