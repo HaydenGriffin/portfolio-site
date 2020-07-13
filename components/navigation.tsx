@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { Props } from 'react';
 import Link from 'next/link';
 import Location from '~/public/svg/location.svg';
 import Home from '~/public/svg/home.svg';
@@ -11,10 +11,7 @@ interface NavItemProps {
   title: string;
 }
 
-const NavItem: React.FC<PropsWithChildren<NavItemProps>> = ({
-  href,
-  title,
-}: PropsWithChildren<NavItemProps>) => (
+const NavItem: React.FC<NavItemProps> = ({ href, title }) => (
   <div className="mx-4">
     <Link href={href}>
       <a>
@@ -27,7 +24,7 @@ const NavItem: React.FC<PropsWithChildren<NavItemProps>> = ({
 );
 
 const Navigation = () => (
-  <nav className="flex flex-row items-center p-4 flex-shrink-0 border-b-2 border-gray-200">
+  <nav className="flex flex-row items-center p-4 flex-shrink-0 border-b-4 border-gray-100">
     <div className="flex-grow justify-left">
       <span className="font-bold text-xl">
         <NavItem href="/" title="H"></NavItem>

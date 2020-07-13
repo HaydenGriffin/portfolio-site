@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navigation from './navigation';
 
 const name = '[Your Name]';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Hayden Griffin';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
