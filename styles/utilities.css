@@ -1,3 +1,12 @@
 .homepage-background {
   background-color: #fef3e1;
+  font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 300, 'slnt' 0, 'CRSV' 0.5;
+}
+
+.max-w-1600 {
+  max-width: 1600px;
+}
+
+.content {
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 600, 'slnt' 0, 'CRSV' 0.5;
 }
