@@ -1,6 +1,6 @@
 .homepage-background {
   background-color: #fef3e1;
-  font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 300, 'slnt' 0, 'CRSV' 0.5;
+  font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 600, 'slnt' 0, 'CRSV' 0.5;
 }
 
 .max-w-1600 {
@@ -8,5 +8,10 @@
 }
 
 .content {
-  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 600, 'slnt' 0, 'CRSV' 0.5;
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 200, 'slnt' 0, 'CRSV' 0.5;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 350px;
 }

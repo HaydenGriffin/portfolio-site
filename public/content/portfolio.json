@@ -16,5 +16,14 @@
     "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
     "github": "",
     "link": ""
+  },
+  {
+    "project": "Movies",
+    "type": "University Work",
+    "date": "2020-06-01",
+    "description": "Final Year Project",
+    "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
+    "github": "",
+    "link": ""
   }
 ]
