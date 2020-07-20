@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const contentDirectory = path.join(process.cwd(), 'public/content');
   const portfolioFilePath = path.join(contentDirectory, 'portfolio.json');
   const fileContent = fs.readFileSync(portfolioFilePath, 'utf-8');
-  let portfolioItems: PortfolioItem[] = JSON.parse(fileContent);
+  let portfolioItems: PortfolioContentItem[] = JSON.parse(fileContent);
 
   return {
     props: {
