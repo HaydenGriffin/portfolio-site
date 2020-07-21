@@ -2,28 +2,45 @@
   {
     "project": "My Website",
     "type": "Personal Project",
-    "date": "2020-06-01",
-    "description": "Personal Website for me",
+    "date": "Jun 2020",
+    "description": "My personal website",
     "tags": ["NextJS", "ReactJS", "Typescript", "TailwindCSS"],
-    "github": "",
-    "link": ""
+    "github": "https://github.com/HaydenGriffin/portfolio-site",
+    "link": "",
+    "imageLink": "images/lfg.png",
+    "altText": ""
+  },
+  {
+    "project": "Discord Group Finder Bot",
+    "type": "Personal Project",
+    "date": "Jun 2020",
+    "description": "A Discord bot that helps people find groups to play games with",
+    "tags": ["NodeJS", "DiscordJS"],
+    "github": "https://github.com/HaydenGriffin/LFG-Bot",
+    "link": "",
+    "imageLink": "images/lfg.png",
+    "altText": ""
   },
   {
     "project": "CV Verification",
     "type": "University Work",
-    "date": "2020-06-01",
-    "description": "Final Year Project",
+    "date": "May 2019",
+    "description": "Final Year Project (Dissertation)",
     "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
     "github": "",
-    "link": ""
+    "link": "",
+    "imageLink": "images/lfg.png",
+    "altText": ""
   },
   {
     "project": "Movies",
     "type": "University Work",
-    "date": "2020-06-01",
-    "description": "Final Year Project",
-    "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
+    "date": "Dec 2018",
+    "description": "Coursework Project",
+    "tags": ["Spring", "Bootstrap", "MySQL"],
     "github": "",
-    "link": ""
+    "link": "",
+    "imageLink": "images/lfg.png",
+    "altText": ""
   }
 ]

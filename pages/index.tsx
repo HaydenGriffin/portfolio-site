@@ -46,9 +46,9 @@ export default function Home() {
       </Head>
       <div className="flex flex-grow justify-center homepage-background mb-6">
         <div className="container text-center p-24 sm:p-32 lg:p-40 lg:p-48 xl:p-56 mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl lg:text-6xl">
+          <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl">
             Hello, my name is Hayden. I'm a full stack developer.
-          </h2>
+          </h1>
         </div>
       </div>
 

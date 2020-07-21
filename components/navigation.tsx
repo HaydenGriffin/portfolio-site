@@ -1,10 +1,5 @@
 import React, { Props } from 'react';
 import Link from 'next/link';
-import Location from '~/public/svg/location.svg';
-import Home from '~/public/svg/home.svg';
-import Person from '~/public/svg/person.svg';
-import Code from '~/public/svg/code.svg';
-import Mail from '~/public/svg/mail.svg';
 
 interface NavItemProps {
   href: string;
@@ -16,7 +11,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, title }) => (
     <Link href={href}>
       <a>
         <span>
-          <h3>{title}</h3>
+          <p className="nav-item">{title}</p>
         </span>
       </a>
     </Link>
@@ -24,15 +19,17 @@ const NavItem: React.FC<NavItemProps> = ({ href, title }) => (
 );
 
 const Navigation = () => (
-  <nav className="flex flex-row items-center p-4 flex-shrink-0 border-b-4 border-gray-100">
-    <div className="flex-grow justify-left">
+  <nav className="flex flex-wrap fixed w-full bg-white border-b-4 border-gray-100 items-center justify-between">
+    <div className="flex flex-row items-center justify-between">
       <span className="font-bold text-xl">
         <NavItem href="/" title="H"></NavItem>
       </span>
     </div>
-    <NavItem href="about" title="About"></NavItem>
-    <NavItem href="portfolio" title="Portfolio"></NavItem>
-    <NavItem href="contact" title="Contact"></NavItem>
+    <div className="flex justify-end flex-row px-2 py-4">
+      <NavItem href="about" title="About"></NavItem>
+      <NavItem href="portfolio" title="Portfolio"></NavItem>
+      <NavItem href="contact" title="Contact"></NavItem>
+    </div>
   </nav>
 );
 

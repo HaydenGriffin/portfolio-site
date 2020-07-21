@@ -1,7 +1,47 @@
 @font-face {
   font-family: Recursive VF;
   src: url('/fonts/Recursive_VF_1.52.ttf');
-  font-weight: bold;
+  font-weight: normal;
   font-display: auto;
   font-style: normal;
+}
+
+.text-colour {
+  color: #002a43;
+}
+
+html {
+  @apply text-colour;
+}
+
+.p-style {
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 400, 'slnt' 0, 'CRSV' 0;
+}
+
+p {
+  @apply p-style;
+}
+
+.h1-style {
+  font-variation-settings: 'MONO' 1, 'CASL' 0.5, 'wght' 800, 'slnt' 0, 'CRSV' 0;
+}
+
+h1 {
+  @apply h1-style;
+}
+
+.h2-style {
+  font-variation-settings: 'MONO' 1, 'CASL' 0.5, 'wght' 700, 'slnt' 0, 'CRSV' 0;
+}
+
+h2 {
+  @apply h2-style;
+}
+
+.nav-item:hover {
+  text-shadow: 0 0.015em, 0 -0.015em, 0.015em 0, -0.015em 0;
+}
+
+main {
+  @apply pt-12;
 }

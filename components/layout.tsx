@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Navigation from './navigation';
 
 const name = '[Your Name]';
@@ -14,10 +13,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main>
+      <body>
         <Navigation />
-        <div>{children}</div>
-      </main>
+        <main>
+          <div>{children}</div>
+        </main>
+      </body>
     </div>
   );
 }

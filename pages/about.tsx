@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import { PropsWithChildren } from 'react';
+import Location from '~/public/svg/location.svg';
 
 export default function About() {
   return (
@@ -20,7 +20,10 @@ export default function About() {
                     alt="Image of me"
                   ></img>
                 </div>
-                <span className="text-xl">Bournemouth, Dorset (UK)</span>
+                <div className="flex flex-row justify-center">
+                  <Location className="mr-1" />
+                  <p className="text-xl">Bournemouth, Dorset (UK)</p>
+                </div>
               </div>
             </div>
             <div className="w-full lg:w-4/6 px-2">
