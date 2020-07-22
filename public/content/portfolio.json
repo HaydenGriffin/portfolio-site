@@ -6,7 +6,7 @@
     "description": "My personal website",
     "tags": ["NextJS", "ReactJS", "Typescript", "TailwindCSS"],
     "github": "https://github.com/HaydenGriffin/portfolio-site",
-    "link": "",
+    "link": "https://adoring-kilby-9f8808.netlify.app/",
     "imageLink": "images/lfg.png",
     "altText": ""
   },
@@ -27,7 +27,7 @@
     "date": "May 2019",
     "description": "Final Year Project (Dissertation)",
     "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
-    "github": "",
+    "github": "https://github.com/HaydenGriffin/CVVerification",
     "link": "",
     "imageLink": "images/lfg.png",
     "altText": ""
@@ -38,7 +38,7 @@
     "date": "Dec 2018",
     "description": "Coursework Project",
     "tags": ["Spring", "Bootstrap", "MySQL"],
-    "github": "",
+    "github": "https://github.com/jacksimmonds0/com3014_coursework",
     "link": "",
     "imageLink": "images/lfg.png",
     "altText": ""

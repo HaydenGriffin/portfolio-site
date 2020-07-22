@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { PropsWithChildren } from 'react';
+import Link from 'next/link';
 
 interface HomeContentSectionItemProps {
   colour: string;
@@ -44,20 +45,23 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex flex-grow justify-center homepage-background mb-6">
-        <div className="container text-center p-24 sm:p-32 lg:p-40 lg:p-48 xl:p-56 mb-20">
-          <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl">
+      <div className="flex justify-center homepage-background">
+        <div className="flex-1 max-w-1600 text-center p-24 sm:p-32 lg:p-40 lg:p-48 xl:p-56 mb-20">
+          <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl pb-10">
             Hello, my name is Hayden. I'm a full stack developer.
           </h1>
+          <Link href="/about">
+            <button className="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4">
+              Read More
+            </button>
+          </Link>
+          <a href="/content/cv.pdf">
+            <button className="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              View CV
+            </button>
+          </a>
         </div>
       </div>
-
-      <HomeContentSectionItem colour="bg-red-600" reversed={false}>
-        This is the content for item 1
-      </HomeContentSectionItem>
-      <HomeContentSectionItem colour="bg-blue-600" reversed={true}>
-        This is the content for item 2
-      </HomeContentSectionItem>
     </Layout>
   );
 }

@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <body>
         <Navigation />
-        <main>
+        <main className="pt-12">
           <div>{children}</div>
         </main>
       </body>

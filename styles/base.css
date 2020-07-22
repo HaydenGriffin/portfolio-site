@@ -41,7 +41,3 @@ h2 {
 .nav-item:hover {
   text-shadow: 0 0.015em, 0 -0.015em, 0.015em 0, -0.015em 0;
 }
-
-main {
-  @apply pt-12;
-}

@@ -1,6 +1,7 @@
 .homepage-background {
   background-color: #fef3e1;
   font-variation-settings: 'MONO' 1, 'CASL' 1, 'wght' 600, 'slnt' 0, 'CRSV' 0.5;
+  min-height: calc(100vh - 48px);
 }
 
 .max-w-1600 {
@@ -16,7 +17,7 @@
   max-width: 350px;
 }
 
-.portfolio-image {
+.portfolio-item {
   width: 100%;
-  max-width: 350px;
+  max-width: 550px;
 }

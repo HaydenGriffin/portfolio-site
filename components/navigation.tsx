@@ -19,7 +19,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, title }) => (
 );
 
 const Navigation = () => (
-  <nav className="flex flex-wrap fixed w-full bg-white border-b-4 border-gray-100 items-center justify-between">
+  <nav className="flex flex-wrap fixed w-full bg-white border-b-4 border-gray-100 items-center justify-between h-16">
     <div className="flex flex-row items-center justify-between">
       <span className="font-bold text-xl">
         <NavItem href="/" title="H"></NavItem>

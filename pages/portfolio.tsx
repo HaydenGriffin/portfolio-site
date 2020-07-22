@@ -15,8 +15,9 @@ interface PortfolioContentItem {
   description: string;
   tags: string[];
   github: string;
-  link: Url;
+  link: string;
   imageLink: string;
+  altText: string;
 }
 
 export default function Portfolio({
@@ -29,16 +30,20 @@ export default function Portfolio({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex justify-center p-10">
+      <div className="flex justify-center mt-10">
         <div className="flex-1 max-w-1600">
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-center md:justify-between">
             {portfolioItems.map((portfolioItem: PortfolioContentItem) => (
-              <div className="w-full lg:w-1/3 px-8">
-                <div className="flex flex-col mb-10">
-                  <div className="square bg-blue-600 mb-4">
-                    <img className="" src={portfolioItem.imageLink}></img>
+              <div className="w-full portfolio-item md:w-1/2 lg:w-1/3 px-6 mb-8">
+                <div className="flex flex-col mb-10 bg-gray-100 rounded-lg p-4 h-full">
+                  <div className="">
+                    <img
+                      className="rounded-lg"
+                      src={portfolioItem.imageLink}
+                      alt={portfolioItem.altText}
+                    />
                   </div>
-                  <h2 className="text-3xl pb-2">{portfolioItem.project}</h2>
+                  <h2 className="text-3xl py-2">{portfolioItem.project}</h2>
                   <p className="pb-2">
                     {portfolioItem.type}
                     {' | '}
@@ -49,14 +54,16 @@ export default function Portfolio({
                     {portfolioItem.tags.map((tag: string) => (
                       <span className="text-yellow-600 pr-3 mb-2">#{tag} </span>
                     ))}
-                    {portfolioItem.github.length > 0 ? (
+                    {portfolioItem.github.length > 0 && (
                       <a href={portfolioItem.github}>
                         <GitHubIcon className="fill-current mr-3" />
                       </a>
-                    ) : (
-                      <GitHubIcon className="fill-current text-gray-500 mr-3" />
                     )}{' '}
-                    <LinkIcon className="fill-current" />
+                    {portfolioItem.link.length > 0 && (
+                      <a href={portfolioItem.link}>
+                        <LinkIcon className="fill-current" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
