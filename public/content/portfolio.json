@@ -1,5 +1,6 @@
 [
   {
+    "id": "website",
     "project": "My Website",
     "type": "Personal Project",
     "date": "Jun 2020",
@@ -11,6 +12,7 @@
     "altText": ""
   },
   {
+    "id": "discord-bot",
     "project": "Discord Group Finder Bot",
     "type": "Personal Project",
     "date": "Jun 2020",
@@ -22,6 +24,7 @@
     "altText": ""
   },
   {
+    "id": "cv-verification",
     "project": "CV Verification",
     "type": "University Work",
     "date": "May 2019",
@@ -33,6 +36,7 @@
     "altText": ""
   },
   {
+    "id": "movies",
     "project": "Movies",
     "type": "University Work",
     "date": "Dec 2018",

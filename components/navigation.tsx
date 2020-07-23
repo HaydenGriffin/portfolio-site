@@ -26,9 +26,9 @@ const Navigation = () => (
       </span>
     </div>
     <div className="flex justify-end flex-row px-2 py-4">
-      <NavItem href="about" title="About"></NavItem>
-      <NavItem href="portfolio" title="Portfolio"></NavItem>
-      <NavItem href="contact" title="Contact"></NavItem>
+      <NavItem href="/about" title="About"></NavItem>
+      <NavItem href="/portfolio" title="Portfolio"></NavItem>
+      <NavItem href="/contact" title="Contact"></NavItem>
     </div>
   </nav>
 );

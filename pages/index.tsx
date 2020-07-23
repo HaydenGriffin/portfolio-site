@@ -45,21 +45,28 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex justify-center homepage-background">
-        <div className="flex-1 max-w-1600 text-center p-24 sm:p-32 lg:p-40 lg:p-48 xl:p-56 mb-20">
-          <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl pb-10">
-            Hello, my name is Hayden. I'm a full stack developer.
-          </h1>
-          <Link href="/about">
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4">
-              Read More
-            </button>
-          </Link>
-          <a href="/content/cv.pdf">
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              View CV
-            </button>
-          </a>
+      <div className="flex justify-center text-center homepage-background">
+        <div className="flex flex-col max-w-1600">
+          <div className="flex-1 text-center px-16 pt-40 pb-20 mb-10 sm:px-24 md:px-32 lg:px-40 xl:px-48">
+            <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl pb-8">
+              Hello, my name is Hayden. I'm a full stack developer.
+            </h1>
+            <div className="flex flex-wrap justify-center">
+              <Link href="/about">
+                <button className="m-2 w-32 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  Read More
+                </button>
+              </Link>
+              <a href="/content/cv.pdf">
+                <button className="m-2 w-32 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  View CV
+                </button>
+              </a>
+            </div>
+          </div>
+          <div className="justify-center text-center mb-10">
+            Social links here
+          </div>
         </div>
       </div>
     </Layout>
