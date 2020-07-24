@@ -20,17 +20,42 @@ export default function Project({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center p-10">
         <div className="flex-1 max-w-1600">
-          <h2>{portfolioItem.id}</h2>
-          <img
-            className="rounded-lg"
-            src={'../' + portfolioItem.imageLink}
-            alt={portfolioItem.altText}
-          />
+          <div className="flex justify-center flex-wrap -mx-6">
+            <div className="w-full lg:w-1/2 px-6">
+              <h2 className="text-3xl py-2">{portfolioItem.project}</h2>
+              <p className="pb-2">
+                {portfolioItem.type}
+                {' | '}
+                {portfolioItem.date}
+              </p>
+              <div className="flex flex-wrap">
+                {portfolioItem.tags.map((tag: string, index) => (
+                  <span className="text-yellow-600 pr-3 mb-2" key={index}>
+                    #{tag}{' '}
+                  </span>
+                ))}
+              </div>
+              {portfolioItem.longDescription.map((paragraph: string) => (
+                <p className="pb-2 text-justify">{paragraph}</p>
+              ))}
+              {nextItem.length > 0 ? (
+                <Link href={nextItem}>View next project</Link>
+              ) : (
+                <Link href="/portfolio">Back to projects</Link>
+              )}
+            </div>
+            <div className="w-full lg:w-1/2 px-6">
+              <img
+                className="rounded-lg"
+                src={'../' + portfolioItem.imageLink}
+                alt={portfolioItem.altText}
+              />
+            </div>
+          </div>
         </div>
       </div>
-      {nextItem.length > 0 && <Link href={nextItem}>Lol</Link>}
     </Layout>
   );
 }
@@ -61,11 +86,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const portfolioItem = portfolioItems[index];
   let nextItem = '';
 
-  if (index + 1 < portfolioItems.length) {
+  if (index < portfolioItems.length - 1) {
     nextItem = portfolioItems[index + 1].id;
   }
-
-  console.log(nextItem);
 
   return {
     props: {

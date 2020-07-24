@@ -21,8 +21,8 @@ export default function Portfolio({
         <title>{siteTitle}</title>
       </Head>
       <div className="flex justify-center mt-10">
-        <div className="flex-1 max-w-1600">
-          <div className="flex flex-wrap justify-center md:justify-between">
+        <div className="flex-1 max-w-1600 lg:px-2">
+          <div className="flex flex-wrap justify-center portfolio-grid">
             {portfolioItems.map(
               (portfolioItem: PortfolioContentItem, index) => (
                 <div
@@ -42,7 +42,7 @@ export default function Portfolio({
                         {' | '}
                         {portfolioItem.date}
                       </p>
-                      <p className="pb-2">{portfolioItem.description}</p>
+                      <p className="pb-2">{portfolioItem.shortDescription}</p>
                     </a>
                     <div className="flex flex-wrap">
                       {portfolioItem.tags.map((tag: string, index) => (

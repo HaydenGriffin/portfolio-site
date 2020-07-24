@@ -3,7 +3,8 @@ export interface PortfolioContentItem {
   project: string;
   type: string;
   date: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string[];
   tags: string[];
   github: string;
   link: string;
