@@ -3,8 +3,8 @@
     "companyName": "IRMACOS",
     "role": "TBD",
     "location": "Bournemouth, Dorset",
-    "startDate": "2020-06-01",
-    "endDate": "",
+    "startDate": "Jun 2020",
+    "endDate": "Present",
     "keyInformation": [],
     "technologies": []
   },
@@ -12,8 +12,8 @@
     "companyName": "Ratio",
     "role": "Graduate Software Developer",
     "location": "Bournemouth, Dorset",
-    "startDate": "2019-09-01",
-    "endDate": "2020-03-01",
+    "startDate": "Sep 2019",
+    "endDate": "Mar 2020",
     "keyInformation": [
       "Designed and created REST APIs using node.js and Go to retrieve and format data for use within the companies applications",
       "Built and designed front-end single page applications using React.js / Redux",
@@ -44,8 +44,8 @@
     "companyName": "FIVIUM",
     "role": "Trainee Applications Developer",
     "location": "Covent Garden, London",
-    "startDate": "2017-07-01",
-    "endDate": "2018-08-01",
+    "startDate": "Jul 2017",
+    "endDate": "Aug 2018",
     "keyInformation": [
       "Professional Training placement completed as part of my university degree",
       "Developed and worked on a range of systems; using FOXopen - an inhouse framework for building secure web applications",

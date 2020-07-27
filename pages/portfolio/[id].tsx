@@ -41,9 +41,13 @@ export default function Project({
                 <p className="pb-2 text-justify">{paragraph}</p>
               ))}
               {nextItem.length > 0 ? (
-                <Link href={nextItem}>View next project</Link>
+                <Link href={nextItem}>
+                  <a>View next project</a>
+                </Link>
               ) : (
-                <Link href="/portfolio">Back to projects</Link>
+                <Link href="/portfolio">
+                  <a>Back to projects</a>
+                </Link>
               )}
             </div>
             <div className="w-full lg:w-1/2 px-6">
