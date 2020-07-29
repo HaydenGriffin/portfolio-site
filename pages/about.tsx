@@ -71,7 +71,7 @@ export default function About({
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-4/6 px-2">
+              <div className="w-full lg:w-4/6 px-2 pb-10">
                 <p className="text-justify text-xl lg:text-2xl">
                   Hello, my name is Hayden and I am a full stack developer based
                   in Dorset (UK). Previously I worked at x, y and z. I now work
