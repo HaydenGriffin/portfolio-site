@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
+import { InternalButton, ExternalButton } from '../components/button';
 import { PropsWithChildren } from 'react';
-import Link from 'next/link';
 
 interface HomeContentSectionItemProps {
   colour: string;
@@ -48,20 +48,16 @@ export default function Home() {
       <div className="flex justify-center text-center homepage-background">
         <div className="flex flex-col max-w-1600">
           <div className="flex-1 text-center px-16 pt-40 pb-20 mb-10 sm:px-24 md:px-32 lg:px-40 xl:px-48">
-            <h1 className="text-3xl leading-tight sm:text-4xl lg:text-5xl lg:text-6xl pb-8">
+            <h1 className="text-3xl leading-tight sm:text-4xl lg:text-6xl pb-8">
               Hello, my name is Hayden. I'm a full stack developer.
             </h1>
             <div className="flex flex-wrap justify-center">
-              <Link href="/about">
-                <button className="m-2 w-32 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                  Read More
-                </button>
-              </Link>
-              <a href="/content/cv.pdf">
-                <button className="m-2 w-32 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                  View CV
-                </button>
-              </a>
+              <div className="m-2">
+                <InternalButton href="/about">Read More</InternalButton>
+              </div>
+              <div className="m-2">
+                <ExternalButton href="/content/cv.pdf">View CV</ExternalButton>
+              </div>
             </div>
           </div>
           <div className="justify-center text-center mb-10">

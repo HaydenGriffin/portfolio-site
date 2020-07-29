@@ -5,8 +5,15 @@
     "location": "Bournemouth, Dorset",
     "startDate": "Jun 2020",
     "endDate": "Present",
-    "keyInformation": [],
-    "technologies": []
+    "keyInformation": [
+      "Produced reports that analyses and compares the feature sets of Internet of Things (IoT) frameworks"
+    ],
+    "technologies": [
+      {
+        "name": "ThingsBoard",
+        "link": "https://thingsboard.io/"
+      }
+    ]
   },
   {
     "companyName": "Ratio",
@@ -76,12 +83,12 @@
   {
     "companyName": "Other places I've worked at",
     "role": "",
-    "location": "Bournemouth, Dorset",
+    "location": "",
     "startDate": "",
     "endDate": "",
     "keyInformation": [
-      "Events Organisation Support (Oct 2015 - Jul 2017) @ University of Surrey Students Union",
-      "Customer Services Assistant (Nov 2013 - Jan 2016) @ John Lewis Partnership (Waitrose)"
+      "Events Organisation Support (Oct 2015 - Jul 2017) Guildford, Surrey @ University of Surrey Students Union",
+      "Customer Services Assistant (Nov 2013 - Jan 2016) Ringwood, Dorset @ John Lewis Partnership (Waitrose)"
     ],
     "technologies": []
   }

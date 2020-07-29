@@ -20,10 +20,21 @@ interface Technology {
   link: string;
 }
 
+interface EducationItem {
+  establishment: string;
+  studied: string;
+  obtained: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+}
+
 export default function About({
   workHistoryItems,
+  educationItems,
 }: {
   workHistoryItems: WorkHistoryItem[];
+  educationItems: EducationItem[];
 }) {
   const [showInformation, setShownInformation] = React.useState<Array<boolean>>(
     []
@@ -79,65 +90,139 @@ export default function About({
               <h2 className="text-3xl py-2">Work Experience</h2>
             </div>
           </div>
-          {workHistoryItems.map((workHistoryItem: WorkHistoryItem, index) => (
-            <div className="flex flex-wrap p-2">
-              <div className="w-full lg:w-2/6 px-2">
-                <h3 className="text-2xl">{workHistoryItem.companyName}</h3>
-                <p className="text-lg pb-1">{workHistoryItem.location}</p>
-                <p>
-                  {workHistoryItem.startDate} - {workHistoryItem.endDate}
-                </p>
-                <p>{workHistoryItem.role}</p>
-                <div className="pb-2">
-                  {workHistoryItem.technologies.map(
-                    (technology: Technology, index) => (
+          {workHistoryItems.map(
+            (
+              {
+                companyName,
+                role,
+                location,
+                startDate,
+                endDate,
+                keyInformation,
+                technologies,
+              }: WorkHistoryItem,
+              index
+            ) => (
+              <div key={index} className="flex flex-wrap p-2">
+                <div className="w-full lg:w-2/6 px-2">
+                  <h3 className="text-2xl">{companyName}</h3>
+                  <p className="text-lg pb-1">{location}</p>
+                  <p>
+                    {startDate} - {endDate}
+                  </p>
+                  <p>{role}</p>
+                  <div className="pb-2">
+                    {technologies.map(({ name, link }: Technology, index) => (
                       <span className="text-yellow-600 pr-3 mb-2" key={index}>
-                        <a href={technology.link}>#{technology.name}</a>{' '}
+                        <a href={link}>#{name}</a>{' '}
                       </span>
-                    )
-                  )}
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => toggleShowInformation(index)}
+                    className="button mt-1 mb-10"
+                  >
+                    {showInformation[index] ? (
+                      <Fragment>Show Less</Fragment>
+                    ) : (
+                      <Fragment>Show More</Fragment>
+                    )}
+                  </button>
                 </div>
-                <button
-                  onClick={() => toggleShowInformation(index)}
-                  className="w-32 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-10"
-                >
-                  Read More
-                </button>
+                <div className="w-full lg:w-4/6 px-2">
+                  {showInformation[index] ? (
+                    <Fragment>
+                      <div className="pb-10 lg:pb-0">
+                        <h3 className="text-2xl">{role}</h3>
+                        <p className="text-lg">
+                          {companyName}{' '}
+                          {location ? <Fragment>- {location}</Fragment> : null}
+                        </p>
+                        <div key={index}>
+                          <ul className="list-disc">
+                            {keyInformation.map(
+                              (information: string, index) => (
+                                <li key={index}>{information}</li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      </div>
+                    </Fragment>
+                  ) : null}
+                </div>
               </div>
-              <div className="w-full lg:w-4/6 px-2">
-                {showInformation[index] ? (
-                  <Fragment>
-                    <h3 className="text-2xl">{workHistoryItem.role}</h3>
-                    <p className="text-lg">
-                      {workHistoryItem.companyName} - {workHistoryItem.location}
-                    </p>
-                    <div key={index}>
-                      <ul>
-                        {workHistoryItem.keyInformation.map(
-                          (information: string, index) => (
-                            <li>{information}</li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                  </Fragment>
-                ) : null}
-              </div>
+            )
+          )}
+          <div className="flex flex-wrap p-2">
+            <div className="w-full lg:w-2/6 px-2">
+              <h2 className="text-3xl py-2">Education History</h2>
             </div>
-          ))}
+          </div>
+          {educationItems.map(
+            (
+              {
+                establishment,
+                studied,
+                obtained,
+                location,
+                startDate,
+                endDate,
+              }: EducationItem,
+              index
+            ) => (
+              <div key={index} className="flex flex-wrap p-2">
+                <div className="w-full lg:w-2/6 px-2">
+                  <h3 className="text-2xl">{establishment}</h3>
+                  <p className="text-lg pb-1">{location}</p>
+                  <p>
+                    {startDate} - {endDate}
+                  </p>
+                  <p className="mb-2">{studied}</p>
+                  <button
+                    onClick={() => toggleShowInformation(index)}
+                    className="button mt-1 mb-10"
+                  >
+                    {showInformation[index] ? (
+                      <Fragment>Show Less</Fragment>
+                    ) : (
+                      <Fragment>Show More</Fragment>
+                    )}
+                  </button>
+                </div>
+                <div className="w-full lg:w-4/6 px-2">
+                  {showInformation[index] ? (
+                    <Fragment>
+                      <div className="pb-10 lg:pb-0">
+                        <h3 className="text-2xl">{studied}</h3>
+                        <p className="text-lg">
+                          {establishment} - {location}
+                        </p>
+                        <p className="text-xl">Obtained {obtained}</p>
+                      </div>
+                    </Fragment>
+                  ) : null}
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
     </Layout>
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const fileContent = retrieveJsonContent('work.json');
-  let workHistoryItems: WorkHistoryItem[] = JSON.parse(fileContent);
+export const getStaticProps: GetStaticProps = async () => {
+  const workFileContent = retrieveJsonContent('work.json');
+  let workHistoryItems: WorkHistoryItem[] = JSON.parse(workFileContent);
+
+  const educationFileContent = retrieveJsonContent('education.json');
+  let educationItems: EducationItem[] = JSON.parse(educationFileContent);
 
   return {
     props: {
       workHistoryItems,
+      educationItems,
     },
   };
 };

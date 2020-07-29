@@ -1,0 +1,7 @@
+.button {
+  @apply w-32 bg-transparent py-2 px-4 border border-primary rounded;
+}
+
+.button:hover {
+  @apply bg-primary text-white text-opacity-75 border-transparent;
+}

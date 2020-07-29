@@ -6,24 +6,32 @@
   font-style: normal;
 }
 
-.text-colour {
+.primary-colour {
   color: #002a43;
 }
 
 html {
-  @apply text-colour;
+  @apply primary-colour;
 }
 
 .p-style {
-  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 400, 'slnt' 0, 'CRSV' 0;
+  font-variation-settings: 'MONO' 0, 'CASL' 0, 'wght' 370, 'slnt' 0, 'CRSV' 0;
 }
 
 p {
   @apply p-style;
 }
 
+.caption-style {
+  font-variation-settings: 'MONO' 0, 'CASL' 0, 'wght' 370, 'slnt' 0, 'CRSV' 0;
+}
+
+p.caption {
+  @apply caption-style;
+}
+
 .h1-style {
-  font-variation-settings: 'MONO' 1, 'CASL' 0.5, 'wght' 800, 'slnt' 0, 'CRSV' 0;
+  font-variation-settings: 'MONO' 0, 'CASL' 0.5, 'wght' 800, 'slnt' 0, 'CRSV' 0;
 }
 
 h1 {
@@ -31,11 +39,19 @@ h1 {
 }
 
 .h2-style {
-  font-variation-settings: 'MONO' 1, 'CASL' 0.5, 'wght' 700, 'slnt' 0, 'CRSV' 0;
+  font-variation-settings: 'MONO' 0, 'CASL' 0.5, 'wght' 600, 'slnt' 0, 'CRSV' 0;
 }
 
 h2 {
   @apply h2-style;
+}
+
+.h3-style {
+  font-variation-settings: 'MONO' 0, 'CASL' 0.5, 'wght' 450, 'slnt' 0, 'CRSV' 0;
+}
+
+h3 {
+  @apply h3-style;
 }
 
 .nav-item:hover {
