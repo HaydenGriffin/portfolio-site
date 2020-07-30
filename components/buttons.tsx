@@ -6,12 +6,14 @@ interface ButtonProps {
   href: string;
 }
 
+const buttonClass = 'button';
+
 const InternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   href,
   children,
 }: PropsWithChildren<ButtonProps>) => (
   <Link href={href}>
-    <button className="button">{children}</button>
+    <button className={buttonClass}>{children}</button>
   </Link>
 );
 
@@ -20,7 +22,7 @@ const ExternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   children,
 }: PropsWithChildren<ButtonProps>) => (
   <a href={href}>
-    <button className="button">{children}</button>
+    <button className={buttonClass}>{children}</button>
   </a>
 );
 

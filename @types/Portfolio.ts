@@ -1,4 +1,4 @@
-export interface PortfolioContentItem {
+export interface PortfolioItemInterface {
   id: string;
   project: string;
   type: string;
