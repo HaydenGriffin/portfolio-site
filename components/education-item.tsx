@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react';
 import { EducationItemInterface } from '~/@types/Education';
+import { OnClickButton } from './buttons';
 
 interface EducationItemProps {
   index: number;
@@ -37,16 +38,16 @@ const EducationItem: React.FC<EducationItemProps> = ({
           {startDate} - {endDate}
         </p>
         <p className="mb-2">{studied}</p>
-        <button
+        <OnClickButton
           onClick={() => toggleShowInformation(index)}
-          className="button mt-1 mb-10"
+          extraClasses="mt-1 mb-10"
         >
           {showInformation[index] ? (
             <Fragment>Show Less</Fragment>
           ) : (
             <Fragment>Show More</Fragment>
           )}
-        </button>
+        </OnClickButton>
       </div>
       <div className="lg:w-4/6 px-2">
         {showInformation[index] ? (

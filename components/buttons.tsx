@@ -6,6 +6,11 @@ interface ButtonProps {
   href: string;
 }
 
+interface ButtonOnClickProps {
+  extraClasses?: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
 const buttonClass = 'button';
 
 const InternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
@@ -26,4 +31,19 @@ const ExternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   </a>
 );
 
-export { InternalButton, ExternalButton };
+const OnClickButton: React.FC<PropsWithChildren<ButtonOnClickProps>> = ({
+  extraClasses,
+  onClick,
+  children,
+}: PropsWithChildren<ButtonOnClickProps>) => (
+  <button
+    className={
+      extraClasses ? `${buttonClass} ${extraClasses}` : `${buttonClass}`
+    }
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
+
+export { InternalButton, ExternalButton, OnClickButton };

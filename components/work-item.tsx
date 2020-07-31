@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react';
 import { WorkItemInterface, TechnologyInterface } from '~/@types/WorkHistory';
+import { OnClickButton } from './buttons';
 
 interface WorkItemProps {
   index: number;
@@ -45,16 +46,16 @@ const WorkItem: React.FC<WorkItemProps> = ({
             </span>
           ))}
         </div>
-        <button
+        <OnClickButton
           onClick={() => toggleShowInformation(index)}
-          className="button mt-1 mb-10"
+          extraClasses="mt-1 mb-10"
         >
           {showInformation[index] ? (
             <Fragment>Show Less</Fragment>
           ) : (
             <Fragment>Show More</Fragment>
           )}
-        </button>
+        </OnClickButton>
       </div>
       <div className="px-2 lg:w-4/6">
         {showInformation[index] ? (
