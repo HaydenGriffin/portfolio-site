@@ -1,19 +1,18 @@
-import { PropsWithChildren, Props, ReactChild, ReactChildren } from 'react';
+import { PropsWithChildren, FC, MouseEvent } from 'react';
 import Link from 'next/link';
-import React from 'react';
 
-interface ButtonProps {
+type ButtonProps = {
   href: string;
-}
+};
 
-interface ButtonOnClickProps {
+type ButtonOnClickProps = {
   extraClasses?: string;
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+};
 
 const buttonClass = 'button';
 
-const InternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
+const InternalButton: FC<PropsWithChildren<ButtonProps>> = ({
   href,
   children,
 }: PropsWithChildren<ButtonProps>) => (
@@ -22,7 +21,7 @@ const InternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   </Link>
 );
 
-const ExternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
+const ExternalButton: FC<PropsWithChildren<ButtonProps>> = ({
   href,
   children,
 }: PropsWithChildren<ButtonProps>) => (
@@ -31,7 +30,7 @@ const ExternalButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   </a>
 );
 
-const OnClickButton: React.FC<PropsWithChildren<ButtonOnClickProps>> = ({
+const OnClickButton: FC<PropsWithChildren<ButtonOnClickProps>> = ({
   extraClasses,
   onClick,
   children,

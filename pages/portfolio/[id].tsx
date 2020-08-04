@@ -2,15 +2,15 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/layout';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { PortfolioItemInterface } from '../../@types/Portfolio';
-import retrieveJsonContent from '../../util/json-retrieve';
+import { PortfolioItemType } from '../../common/types';
+import { retrieveJsonContent } from '../../common/utils';
 import { Section } from '~/components/section';
 
 export default function Project({
   portfolioItem,
   nextItem,
 }: {
-  portfolioItem: PortfolioItemInterface;
+  portfolioItem: PortfolioItemType;
   nextItem: string;
 }) {
   return (
@@ -62,7 +62,7 @@ export default function Project({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const fileContent = retrieveJsonContent('portfolio.json');
-  let portfolioItems: PortfolioItemInterface[] = JSON.parse(fileContent);
+  let portfolioItems: PortfolioItemType[] = JSON.parse(fileContent);
 
   const paths = portfolioItems.map((portfolioItem) => ({
     params: { id: portfolioItem.id },
@@ -76,7 +76,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const fileContent = retrieveJsonContent('portfolio.json');
-  let portfolioItems: PortfolioItemInterface[] = JSON.parse(fileContent);
+  let portfolioItems: PortfolioItemType[] = JSON.parse(fileContent);
   const id = context?.params?.id;
 
   const index = portfolioItems.findIndex(

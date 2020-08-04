@@ -1,13 +1,13 @@
-import { Fragment, useState } from 'react';
-import { EducationItemInterface } from '~/@types/Education';
+import { Fragment, useState, FC } from 'react';
+import { EducationItemType } from '~/common/types';
 import { OnClickButton } from './buttons';
 
-interface EducationItemProps {
+type EducationItemProps = {
   index: number;
-  educationItem: EducationItemInterface;
-}
+  educationItem: EducationItemType;
+};
 
-const EducationItem: React.FC<EducationItemProps> = ({
+const EducationItem: FC<EducationItemProps> = ({
   index,
   educationItem,
 }: EducationItemProps) => {
@@ -18,7 +18,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
     location,
     startDate,
     endDate,
-  }: EducationItemInterface = educationItem;
+  }: EducationItemType = educationItem;
 
   const [showInformation, setShownInformation] = useState<Array<boolean>>([]);
 

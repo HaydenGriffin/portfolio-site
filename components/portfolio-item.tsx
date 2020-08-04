@@ -1,15 +1,15 @@
-import { Fragment } from 'react';
-import { PortfolioItemInterface } from '~/@types/Portfolio';
+import { FC } from 'react';
+import { PortfolioItemType } from '~/common/types';
 import GitHubIcon from '~/public/svg/github.svg';
 import LinkIcon from '~/public/svg/link.svg';
 import Link from 'next/link';
 
-interface PortfolioItemProps {
+type PortfolioItemProps = {
   index: number;
-  portfolioItem: PortfolioItemInterface;
-}
+  portfolioItem: PortfolioItemType;
+};
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({
+const PortfolioItem: FC<PortfolioItemProps> = ({
   index,
   portfolioItem,
 }: PortfolioItemProps) => {
@@ -25,7 +25,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     link,
     imageLink,
     altText,
-  }: PortfolioItemInterface = portfolioItem;
+  }: PortfolioItemType = portfolioItem;
 
   return (
     <div className="portfolio-item md:w-1/2 lg:w-1/3 px-6 mb-8" key={index}>

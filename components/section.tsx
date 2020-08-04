@@ -1,15 +1,15 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, FC } from 'react';
 
-interface SectionProps {
+type SectionProps = {
   id: string;
   paddingYOverride?: string;
   extraClasses?: string;
-}
+};
 
 const sectionDefaultClasses: string =
   'flex flex-col justify-center px-5 md:px-20 xl:px-40';
 
-const Section: React.FC<PropsWithChildren<SectionProps>> = ({
+const Section: FC<PropsWithChildren<SectionProps>> = ({
   id,
   paddingYOverride,
   extraClasses,
