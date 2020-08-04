@@ -1,4 +1,4 @@
-export type EducationItemProps = {
+export type EducationItemType = {
   establishment: string;
   studied: string;
   obtained: string;
@@ -7,7 +7,7 @@ export type EducationItemProps = {
   endDate: string;
 };
 
-export type PortfolioItemProps = {
+export type PortfolioItemType = {
   id: string;
   project: string;
   type: string;
@@ -19,4 +19,19 @@ export type PortfolioItemProps = {
   link: string;
   imageLink: string;
   altText: string;
+};
+
+export type WorkItemType = {
+  companyName: string;
+  role: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  keyInformation: string[];
+  technologies: WorkItemTechnologyType[];
+};
+
+export type WorkItemTechnologyType = {
+  name: string;
+  link: string;
 };

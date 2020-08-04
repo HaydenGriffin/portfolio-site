@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout, { siteTitle } from '~/components/layout';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { PortfolioItemType } from '../../common/types';
-import { retrieveJsonContent } from '../../common/utils';
+import { PortfolioItemType } from '~/common/types';
+import { retrieveJsonContent } from '~/common/utils';
 import { Section } from '~/components/section';
 
 export default function Project({
