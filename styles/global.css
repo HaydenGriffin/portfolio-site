@@ -7,3 +7,15 @@
 
 @tailwind utilities;
 @import './utilities.css';
+
+.theme-light {
+  --bg-background-primary: white;
+  --bg-background-secondary: #f7fafc;
+  --bg-background-ternary: #e2e8f0;
+}
+
+.theme-dark {
+  --bg-background-primary: #0d2438;
+  --bg-background-secondary: #102c44;
+  --bg-background-ternary: #1e3951;
+}

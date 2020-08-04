@@ -1,12 +1,13 @@
-import { Fragment, useState } from 'react';
-import { EducationItemInterface } from '~/@types/Education';
+import { Fragment, useState, FC } from 'react';
+import { EducationItemType } from '~/common/types';
+import { OnClickButton } from './buttons';
 
-interface EducationItemProps {
+type EducationItemProps = {
   index: number;
-  educationItem: EducationItemInterface;
-}
+  educationItem: EducationItemType;
+};
 
-const EducationItem: React.FC<EducationItemProps> = ({
+const EducationItem: FC<EducationItemProps> = ({
   index,
   educationItem,
 }: EducationItemProps) => {
@@ -17,7 +18,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
     location,
     startDate,
     endDate,
-  }: EducationItemInterface = educationItem;
+  }: EducationItemType = educationItem;
 
   const [showInformation, setShownInformation] = useState<Array<boolean>>([]);
 
@@ -37,16 +38,16 @@ const EducationItem: React.FC<EducationItemProps> = ({
           {startDate} - {endDate}
         </p>
         <p className="mb-2">{studied}</p>
-        <button
+        <OnClickButton
           onClick={() => toggleShowInformation(index)}
-          className="button mt-1 mb-10"
+          extraClasses="mt-1 mb-10"
         >
           {showInformation[index] ? (
             <Fragment>Show Less</Fragment>
           ) : (
             <Fragment>Show More</Fragment>
           )}
-        </button>
+        </OnClickButton>
       </div>
       <div className="lg:w-4/6 px-2">
         {showInformation[index] ? (

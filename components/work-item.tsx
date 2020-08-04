@@ -1,15 +1,13 @@
-import { Fragment, useState } from 'react';
-import { WorkItemInterface, TechnologyInterface } from '~/@types/WorkHistory';
+import { Fragment, useState, FC } from 'react';
+import { WorkItemType, WorkItemTechnologyType } from '~/common/types';
+import { OnClickButton } from './buttons';
 
-interface WorkItemProps {
+type WorkItemProps = {
   index: number;
-  workItem: WorkItemInterface;
-}
+  workItem: WorkItemType;
+};
 
-const WorkItem: React.FC<WorkItemProps> = ({
-  index,
-  workItem,
-}: WorkItemProps) => {
+const WorkItem: FC<WorkItemProps> = ({ index, workItem }: WorkItemProps) => {
   const {
     companyName,
     role,
@@ -18,7 +16,7 @@ const WorkItem: React.FC<WorkItemProps> = ({
     endDate,
     keyInformation,
     technologies,
-  }: WorkItemInterface = workItem;
+  }: WorkItemType = workItem;
 
   const [showInformation, setShownInformation] = useState<Array<boolean>>([]);
 
@@ -39,22 +37,22 @@ const WorkItem: React.FC<WorkItemProps> = ({
         </p>
         <p>{role}</p>
         <div className="mb-2">
-          {technologies.map(({ name, link }: TechnologyInterface, index) => (
+          {technologies.map(({ name, link }: WorkItemTechnologyType, index) => (
             <span className="text-yellow-600 pr-3 mb-2" key={index}>
               <a href={link}>#{name}</a>{' '}
             </span>
           ))}
         </div>
-        <button
+        <OnClickButton
           onClick={() => toggleShowInformation(index)}
-          className="button mt-1 mb-10"
+          extraClasses="mt-1 mb-10"
         >
           {showInformation[index] ? (
             <Fragment>Show Less</Fragment>
           ) : (
             <Fragment>Show More</Fragment>
           )}
-        </button>
+        </OnClickButton>
       </div>
       <div className="px-2 lg:w-4/6">
         {showInformation[index] ? (

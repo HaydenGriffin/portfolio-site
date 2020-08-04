@@ -1,4 +1,13 @@
-export interface PortfolioItemInterface {
+export type EducationItemProps = {
+  establishment: string;
+  studied: string;
+  obtained: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+};
+
+export type PortfolioItemProps = {
   id: string;
   project: string;
   type: string;
@@ -10,4 +19,4 @@ export interface PortfolioItemInterface {
   link: string;
   imageLink: string;
   altText: string;
-}
+};

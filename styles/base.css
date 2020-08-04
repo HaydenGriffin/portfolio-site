@@ -6,28 +6,12 @@
   font-style: normal;
 }
 
-.primary-colour {
-  color: #002a43;
-}
-
-html {
-  @apply primary-colour;
-}
-
 .p-style {
   font-variation-settings: 'MONO' 0, 'CASL' 0, 'wght' 370, 'slnt' 0, 'CRSV' 0;
 }
 
 p {
   @apply p-style;
-}
-
-.caption-style {
-  font-variation-settings: 'MONO' 0, 'CASL' 0, 'wght' 370, 'slnt' 0, 'CRSV' 0;
-}
-
-p.caption {
-  @apply caption-style;
 }
 
 .h1-style {
@@ -52,6 +36,14 @@ h2 {
 
 h3 {
   @apply h3-style;
+}
+
+.caption-style {
+  font-variation-settings: 'MONO' 0, 'CASL' 0, 'wght' 370, 'slnt' 0, 'CRSV' 0;
+}
+
+p.caption {
+  @apply caption-style;
 }
 
 .nav-item:hover {

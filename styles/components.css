@@ -1,7 +1,29 @@
+.homepage-background {
+  background-color: #fef3e1;
+}
+
 .button {
-  @apply w-32 bg-transparent py-2 px-4 border border-primary rounded;
+  @apply w-32 bg-transparent py-2 px-4 border border-background-primary rounded;
 }
 
 .button:hover {
-  @apply bg-primary text-white text-opacity-75 border-transparent;
+  @apply bg-background-primary text-white text-opacity-75 border-transparent;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 350px;
+}
+
+.portfolio-item {
+  max-width: 550px;
+}
+
+.nav-item:hover {
+  text-shadow: 0 0.015em, 0 -0.015em, 0.015em 0, -0.015em 0;
+}
+
+.portfolio-grid::after {
+  content: '';
+  flex: auto;
 }

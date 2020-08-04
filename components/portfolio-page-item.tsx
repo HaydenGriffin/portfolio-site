@@ -1,15 +1,15 @@
-import { Fragment } from 'react';
-import { PortfolioItemInterface } from '~/@types/Portfolio';
+import { FC } from 'react';
+import { PortfolioItemType } from '~/common/types';
 import GitHubIcon from '~/public/svg/github.svg';
 import LinkIcon from '~/public/svg/link.svg';
 import Link from 'next/link';
 
-interface PortfolioItemProps {
+type PortfolioItemProps = {
   nextPortfolioItemName: string;
-  portfolioItem: PortfolioItemInterface;
-}
+  portfolioItem: PortfolioItemType;
+};
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({
+const PortfolioItem: FC<PortfolioItemProps> = ({
   nextPortfolioItemName,
   portfolioItem,
 }: PortfolioItemProps) => {
@@ -25,7 +25,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     link,
     imageLink,
     altText,
-  }: PortfolioItemInterface = portfolioItem;
+  }: PortfolioItemType = portfolioItem;
 
   return (
     <div className="flex justify-center flex-wrap -mx-6">

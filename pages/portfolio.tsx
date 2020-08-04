@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { GetStaticProps } from 'next';
-import { PortfolioItemInterface } from '../@types/Portfolio';
-import retrieveJsonContent from '../util/json-retrieve';
+import { PortfolioItemType } from '../common/types';
+import { retrieveJsonContent } from '../common/utils';
 import { Section } from '~/components/section';
 import { PortfolioItem } from '~/components/portfolio-item';
 
 export default function Portfolio({
   portfolioItems,
 }: {
-  portfolioItems: PortfolioItemInterface[];
+  portfolioItems: PortfolioItemType[];
 }) {
   return (
     <Layout>
@@ -18,15 +18,13 @@ export default function Portfolio({
       </Head>
       <Section id="portfolio">
         <div className="flex flex-wrap justify-center portfolio-grid">
-          {portfolioItems.map(
-            (portfolioItem: PortfolioItemInterface, index) => (
-              <PortfolioItem
-                key={index}
-                index={index}
-                portfolioItem={portfolioItem}
-              />
-            )
-          )}
+          {portfolioItems.map((portfolioItem: PortfolioItemType, index) => (
+            <PortfolioItem
+              key={index}
+              index={index}
+              portfolioItem={portfolioItem}
+            />
+          ))}
         </div>
       </Section>
     </Layout>
@@ -35,7 +33,7 @@ export default function Portfolio({
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const fileContent = retrieveJsonContent('portfolio.json');
-  let portfolioItems: PortfolioItemInterface[] = JSON.parse(fileContent);
+  let portfolioItems: PortfolioItemType[] = JSON.parse(fileContent);
 
   return {
     props: {

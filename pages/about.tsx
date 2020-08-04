@@ -2,19 +2,18 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import Location from '~/public/svg/location.svg';
 import { GetStaticProps } from 'next';
-import retrieveJsonContent from '~/util/json-retrieve';
+import { retrieveJsonContent } from '~/common/utils';
 import { Section } from '~/components/section';
 import { WorkItem } from '~/components/work-item';
-import { WorkItemInterface } from '~/@types/WorkHistory';
-import { EducationItemInterface } from '~/@types/Education';
+import { EducationItemType, WorkItemType } from '~/common/types';
 import { EducationItem } from '~/components/education-item';
 
 export default function About({
   workItems,
   educationItems,
 }: {
-  workItems: WorkItemInterface[];
-  educationItems: EducationItemInterface[];
+  workItems: WorkItemType[];
+  educationItems: EducationItemType[];
 }) {
   return (
     <Layout>
@@ -74,12 +73,10 @@ export default function About({
 
 export const getStaticProps: GetStaticProps = async () => {
   const workFileContent = retrieveJsonContent('work.json');
-  let workItems: WorkItemInterface[] = JSON.parse(workFileContent);
+  let workItems: WorkItemType[] = JSON.parse(workFileContent);
 
   const educationFileContent = retrieveJsonContent('education.json');
-  let educationItems: EducationItemInterface[] = JSON.parse(
-    educationFileContent
-  );
+  let educationItems: EducationItemType[] = JSON.parse(educationFileContent);
 
   return {
     props: {
