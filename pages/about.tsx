@@ -36,17 +36,19 @@ export default function About({
             </div>
           </div>
           <div className="px-2 pb-10 lg:w-4/6">
+            <p className="text-justify text-xl pb-6 lg:text-2xl">
+              Hello, my name is Hayden and I am a full stack developer based
+              near Bournemouth (UK). I have recently graduated from University
+              of Surrey with a degree in Computer Science (with placement year).
+              I have experience with developing and designing software including
+              web and mobile applications.
+            </p>
             <p className="text-justify text-xl lg:text-2xl">
-              Hello, my name is Hayden and I am a full stack developer based in
-              Dorset (UK). Previously I worked at x, y and z. I now work
-              remotely on full stack projects. Check out some of my work here
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              viverra nisi orci, quis porttitor justo porttitor nec. Aliquam
-              pharetra gravida ligula, eu hendrerit nibh faucibus ut. Quisque
-              elementum sapien erat, et pharetra nulla tristique et. Praesent
-              nec eros metus. Ut sagittis leo elementum leo placerat rhoncus.
-              Vivamus faucibus dignissim mauris, et vehicula dui porttitor a.
-              Aliquam ultricies sit amet mi et viverra.
+              My hobbies include gaming, weight training, travelling and of
+              course coding! Feel free to check out my projects, and connect
+              with me on my social platforms. If you'd like to get to know me,
+              or have a potential software project that you'd like some help
+              with, don't hesitate to reach out.
             </p>
           </div>
         </div>

@@ -6,14 +6,15 @@
     "date": "Jun 2020",
     "shortDescription": "My personal website",
     "longDescription": [
-      "My personal website that I built in order to play around with some new technologies that I wanted an excuse to use. This website replaces my old website that I built during my first year of University, which was beginning to show signs of aging. I really enjoyed the process of creating this website and working alongside my friend Luke who designed the layout for me.",
-      "For the backend of the project, I decided to use Next.js in combination with Typescript. I had used vanilla React.js at a previous place of work, however I had never used Typescript. A lot of my previous experience with programming comes from typed languages, and I can really appreciate the benefits that Typescript adds to a Javascript project.",
+      "My personal website that I built in order to play around with some new technologies that I wanted an excuse to use. This website replaces my old website that I built during my first year of University, which was beginning to show signs of aging. I really enjoyed the process of creating this website and working alongside my friend Luke who helped design the layout with me.",
+      "For the backend of the project, I decided to use Next.js in combination with Typescript. I had used vanilla React.js at a previous place of work, however I had never used Typescript. A lot of my previous experience with programming comes from typed languages, and I can really appreciate the benefits that Typescript adds to a Javascript project, especially when there is a large backend component to the website.",
+      "For CSS styling, I made use of Tailwind CSS for this project. Previously I have worked with Material UI which is a really useful tool and provides lots of complex components out of the box, however it can result in cookie-cutter looking websites. Tailwind allows for you to easily create and style your own components, giving them a unique flare.",
       "This project was a great experience for me that exposed me to a bunch of new technologies, and more importantly kept me occupied during COVID-19."
     ],
-    "tags": ["NextJS", "ReactJS", "Typescript", "TailwindCSS"],
+    "tags": ["NextJS", "ReactJS", "Typescript", "Framer Motion", "TailwindCSS"],
     "github": "https://github.com/HaydenGriffin/portfolio-site",
     "link": "https://adoring-kilby-9f8808.netlify.app/",
-    "imageLink": "images/lfg.png",
+    "imageLink": "images/personal-site.png",
     "altText": ""
   },
   {
@@ -23,7 +24,10 @@
     "date": "Jun 2020",
     "shortDescription": "A Discord bot that helps people find groups to play games with",
     "longDescription": [
-      "A Discord bot that helps people find groups to play games with"
+      "During COVID-19 I ended up becoming more involved within gaming communities on Discord, resulting in co-founding a community based on Call of Duty: Warzone. This server was created to provide a means for skilled players to find other people to party up with and play together.",
+      "To help players with the process of finding other people to play with, I decided to create a bot to help. The bot monitors a specific text channel and waits until a user issues a command that the bot can process.",
+      "The main commands that a user can issue is 'LFG' (Looking For Group) and 'LFM' (Looking For Member). The 'LFG' command applies a designated 'LFG' Discord role to the user that executed the command for a specified period of time. Whilst the user is in the 'LFG' role, they are highlighted yellow and displayed separately in the members list. The user is automatically removed from the 'LFG' role after the specified period expires.",
+      "The 'LFM' command allows users who need members to join their group to @mention the 'LFG' role. This provides a notification to everyone in the 'LFG' role, allowing for the players to easily find a group to join."
     ],
     "tags": ["NodeJS", "DiscordJS"],
     "github": "https://github.com/HaydenGriffin/LFG-Bot",
@@ -37,11 +41,16 @@
     "type": "University Work",
     "date": "May 2019",
     "shortDescription": "Final Year Project (Dissertation)",
-    "longDescription": ["Final Year Project (Dissertation)"],
+    "longDescription": [
+      "For my Final Year Project at University, I decided to build a system that enables CV applications to be provably secure. The key idea was to utilise the immutability and decentralized characteristics of Blockchain technologies to securely store CV applications within blocks. Trusted reviewer users then provide reviews against a specific CV application, giving details relating to the accuracy and trustworthiness of the CV application also stored within blocks.",
+      "Employer users are able to access a portal where they can view the CV applications along with the corresponding feedback provided by the Reviewer users. The idea is that a CV application that has been endorsed by trusted users and proven to be reliable allows Employers to spend less time fact checking potential Employees, thereby speeding up the employment process.",
+      "Hyperledger Fabric within Docker containers was used to power this project as it allows for complex Smart Contracts (Chaincode) to be developed, and also allows for byte data to be stored on chain. Invocation of Chaincode also doesn't incur any cost as it is a Consortium blockchain technology and therefore doesn't require the use of Proof of Work / Proof of Stake protocols to achieve consensus across the distributed nodes of a Hyperledger Fabric network.",
+      "I opted to use Golang (Go) to power the backend of the application. Hyperledger Fabric provides a SDK written in Go which enables rapid development of Hyperledger Fabric applications. Gorilla Mux was used as a request router to manage the incoming requests and map them to a corresponding handler. Bootstrap was used for simple styling - front end wasn't the priority of this project."
+    ],
     "tags": ["Golang", "Docker", "Hyperledger Fabric", "MySQL"],
     "github": "https://github.com/HaydenGriffin/CVVerification",
     "link": "",
-    "imageLink": "images/lfg.png",
+    "imageLink": "images/cv-verification.png",
     "altText": ""
   },
   {

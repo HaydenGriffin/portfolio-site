@@ -45,12 +45,3 @@ h3 {
 p.caption {
   @apply caption-style;
 }
-
-.nav-item:hover {
-  text-shadow: 0 0.015em, 0 -0.015em, 0.015em 0, -0.015em 0;
-}
-
-.portfolio-grid::after {
-  content: '';
-  flex: auto;
-}
