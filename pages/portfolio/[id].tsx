@@ -34,8 +34,8 @@ export default function Project({
         <title>{siteTitle}</title>
       </Head>
       <Section id="portfolio-item" paddingYOverride="py-32">
-        <div className="flex justify-center flex-wrap -mx-6">
-          <div className="lg:w-1/2 px-6">
+        <div className="flex justify-center flex-wrap lg:-mx-8 xl:-mx-12">
+          <div className="lg:w-3/5 lg:px-8 xl:px-12">
             <h2 className="text-3xl py-2">{project}</h2>
             <p className="pb-2">
               {type}
@@ -57,26 +57,26 @@ export default function Project({
             <div className="flex flex-wrap mb-4">
               {github.length > 0 && (
                 <a href={github}>
-                  <GitHubIcon className="fill-current mr-3" />
+                  <GitHubIcon className="fill-current h-10 mr-6" />
                 </a>
               )}{' '}
               {link.length > 0 && (
                 <a href={link}>
-                  <LinkIcon className="fill-current" />
+                  <LinkIcon className="fill-current h-10" />
                 </a>
               )}
             </div>
             {nextItem.length > 0 ? (
               <Link href={nextItem}>
-                <a>View next project</a>
+                <a className="text-2xl">View next project</a>
               </Link>
             ) : (
               <Link href="/portfolio">
-                <a>Back to projects</a>
+                <a className="text-2xl">Back to projects</a>
               </Link>
             )}
           </div>
-          <div className="lg:w-1/2 px-6">
+          <div className="lg:mt-16 lg:w-2/5 lg:px-8 xl:px-12">
             <img className="rounded-lg" src={'../' + imageLink} alt={altText} />
           </div>
         </div>

@@ -1,5 +1,23 @@
 [
   {
+    "id": "quokka",
+    "project": "Quokka",
+    "type": "Personal Project",
+    "date": "Aug 2020",
+    "shortDescription": "Set design scheduler",
+    "longDescription": [
+      "A new project that is being worked on collaboratively alongside one of my friends who works in the industry.",
+      "This software enables set designers to create schedules for live shows. These schedules include the ability to choose what media should be displayed at a specific time of a song within a concert.",
+      "The codebase for this project is split into two; the front end side of things is built using React (bootstrapped with CRA) with Typescript, and Tailwind CSS for styling.",
+      "The backend of the project is based on Node.js with Typescript, with an Express API that connects to AWS DynamoDB."
+    ],
+    "tags": ["ReactJS", "Typescript", "TailwindCSS", "Express", "DynamoDB"],
+    "github": "https://github.com/HaydenGriffin/Quokka",
+    "link": "",
+    "imageLink": "images/quokka.png",
+    "altText": ""
+  },
+  {
     "id": "website",
     "project": "My Website",
     "type": "Personal Project",

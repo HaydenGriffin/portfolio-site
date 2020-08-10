@@ -29,7 +29,7 @@ const PortfolioItem: FC<PortfolioItemProps> = ({
 
   return (
     <div className="portfolio-item md:w-1/2 lg:w-1/3 px-6 mb-8" key={index}>
-      <div className="flex flex-col mb-10 bg-gray-100 rounded-lg p-4 h-full">
+      <div className="flex flex-col mb-2 bg-gray-100 rounded-lg p-4 h-full">
         <Link href="portfolio/[id]" as={'portfolio/' + id}>
           <a>
             <img className="rounded-lg" src={imageLink} alt={altText} />
@@ -50,12 +50,12 @@ const PortfolioItem: FC<PortfolioItemProps> = ({
           ))}
           {github.length > 0 && (
             <a href={github}>
-              <GitHubIcon className="fill-current mr-3" />
+              <GitHubIcon className="fill-current mr-3 h-6" />
             </a>
           )}{' '}
           {link.length > 0 && (
             <a href={link}>
-              <LinkIcon className="fill-current" />
+              <LinkIcon className="fill-current h-6" />
             </a>
           )}
         </div>

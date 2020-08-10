@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import { InternalButton, ExternalButton } from '../components/buttons';
 import { Section } from '../components/section';
+import GitHubIcon from '~/public/svg/github.svg';
+import LinkedInIcon from '~/public/svg/linkedin.svg';
+import InstagramIcon from '~/public/svg/instagram.svg';
 
 export default function Home() {
   return (
@@ -11,7 +14,7 @@ export default function Home() {
       </Head>
       <Section
         id="homepage"
-        extraClasses="homepage-background min-h-screen"
+        isHomepage={true}
         paddingYOverride="md:py-32 lg:py-40"
       >
         <div className="flex-1 text-center px-16 pt-40 pb-20 mb-10 sm:px-24 md:px-32 lg:px-40 xl:px-48">
@@ -27,8 +30,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="justify-center text-center mb-10">
-          Social links here
+        <div className="flex justify-center mb-10">
+          <a href="https://github.com/HaydenGriffin">
+            <GitHubIcon className="fill-current w-12 h-12 mr-4" />
+          </a>
+          <a href="https://www.linkedin.com/in/hayden-griffin-65b66612b/">
+            <LinkedInIcon className="fill-current w-12 h-12 mr-4" />
+          </a>
+          <a href="https://www.instagram.com/haydengriffin97">
+            <InstagramIcon className="fill-current w-12 h-12" />
+          </a>
         </div>
       </Section>
     </Layout>
